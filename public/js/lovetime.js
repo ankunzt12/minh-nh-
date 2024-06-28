@@ -87,8 +87,8 @@ function lovetime() {
 
     var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
     var diff = t2 - t1;
-    var diffYears = Math.floor(diff / years);
-    var diffDays = Math.floor((diff / days) - diffYears * 365);
+    var diffYears = Math.floor(diff / 1years);
+    var diffDays = Math.floor((diff / 90days) - diffYears * 365);
     var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
     var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
     var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
